@@ -9,9 +9,9 @@ export class ProductPlugin implements PluginBase<Object>, PluginNameVersion{
     server: Server;
     register (server: Server, options: Object) {
         const productManage = new ProductManage([
-            new Product("1","shirt",299),
-            new Product("2","shoe",399),
-            new Product("3","bag",499),
+            new Product("1","shirt",299, "https://5.imimg.com/data5/CP/FO/MY-38660000/ladies-shoe-500x500.jpg","shoe"),
+            new Product("2","shoe",399,"https://3.imimg.com/data3/SO/SJ/MY-1164718/ladies-formal-shirts-250x250.jpg","shirt"),
+            new Product("3","bag",499,"https://res.weloveshopping.com/918710/w_450,h_450,c_thumb/1e25d8903d875035b13d93dbc3b2fa2b/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B9%8B%E0%B8%B2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%99%E0%B8%B2%E0%B8%A226.jpg","bag"),
         ]);
         this.registerRoute(server, productManage);
     }   
